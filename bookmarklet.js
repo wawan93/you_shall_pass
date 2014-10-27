@@ -8,7 +8,7 @@ javascript:(function(host){
 	} while (salt === '');
 	function generateHash(salt) {
   	var alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*([{}])_+~-'+
-			'1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+			'1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&*([{}])_+~-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	var integer, j, temp, i, v, p;
 
 		for (i = alphabet.length - 1, v = 0, p = 0; i > 0; i--, v++) {
