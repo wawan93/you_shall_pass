@@ -1,11 +1,18 @@
 javascript:(function(host){
 	var site, salt;
 	do {
-		site = prompt('Введите сайт:',host);
+		site = prompt('Domain name:',host);
 	} while (site === '');
-	do {
-		salt = prompt('Введите парольную фразу:');
+
+    if(site === null) return false;
+    else site = site.toLowerCase();
+
+    do {
+		salt = prompt('Master-password:');
 	} while (salt === '');
+
+    if(salt === null) return false;
+
 	function generateHash(salt) {
   	var alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*([{}])_+~-'+
 			'1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&*([{}])_+~-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -23,6 +30,6 @@ javascript:(function(host){
 		return alphabet.substr(1,15);
 	}
 
-	prompt('Ваш пароль:', generateHash(salt+site+salt));
+	prompt('You password for '+site+':', generateHash(salt+site+salt));
 
 })(location.hostname);
