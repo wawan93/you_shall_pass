@@ -6,7 +6,7 @@
         if(a) {
             alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*([{}])_+~-'+'1234567890abcdefghijklmnopqrstuvwxyz!@#$%^&*([{}])_+~-ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         } else {
-            alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890__--'+'1234567890abcdefghijklmnopqrstuvwxyz__--ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890__--1234567890abcdefghijklmnopqrstuvwxyz__--ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         }
         var integer, j, temp, i, v, p;
 
@@ -34,6 +34,9 @@
         var label=d.createElement('label');
         var chbx=d.createElement('input');
 
+        if(h.indexOf('www.')===0)
+            h = h.substring(4);
+
         s.innerHTML='input,label{margin:5px auto;display:block;padding:5px;width:200px;outline:none;} input[type=checkbox]{display:inline;margin:0; padding:0; width:20px;}';
 
         host.value = h;
@@ -48,6 +51,7 @@
 
         chbx.type='checkbox';
         chbx.id = 'chbx';
+        chbx.setAttribute('checked','checked');
         label.appendChild(chbx);
         label.innerHTML += '!@#$%^&*([{_+~-}])';
 
