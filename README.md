@@ -1,7 +1,7 @@
 you_shall_pass
 ==============
 
-Bookmarklet for generating passwords from http://pass.wawan.pro/
+Bookmarklet for generating passwords from http://youshallpass.ru/
 
 Would you like to have very strong passwords, which are not unique for different sites, and at the same time to remember only one password to rule all of them?
 
